@@ -1,0 +1,32 @@
+Cybersecurity Internship – Nmap Network Scan Report
+
+Tool used: Nmap (-sS TCP SYN scan)
+
+Network scanned: 192.168.1.0/24
+
+Date: 04 August 2025
+
+Purpose: Identify active devices and open ports on the local network for risk assessment.
+
+
+Risks Identified
+Open HTTP port on router	Unencrypted access — may expose login credentials if admin page is not secured
+SSH on desktop			If weak passwords are used, could be brute-forced
+ADB on Android device		Port 5555 allows remote access — should be disabled when not in use
+RDP on laptop			Exposes remote desktop login — should be behind VPN or disabled if unused
+
+
+Conclusion & Recommendations
+Several devices expose open ports commonly targeted by attackers.
+
+Unsecured services (like HTTP or ADB) should be disabled or secured with firewalls.
+
+It is recommended to:
+
+Disable ADB when not in use
+
+Change default credentials on all devices
+
+Enable HTTPS on router
+
+Restrict RDP access to internal/VPN-only use
